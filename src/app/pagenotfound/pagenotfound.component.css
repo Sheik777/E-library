@@ -1,0 +1,12 @@
+.pnf{
+    text-align: center;
+    margin-top: 60px;
+}
+.home:hover{
+    background-color: rgb(137, 243, 202);
+}
+.home{
+    padding: 3px;
+    border-radius: 5px;
+    margin-top: 20px;
+}

@@ -1,1 +1,30 @@
-<p>register works!</p>
+<div class="reg">
+
+  <form class="row g-3" [formGroup]="signup" (ngSubmit)="reg()">
+    <div class="col-md-6">
+      <label for="firstname" class="form-label">First name :</label>
+      <input type="text" class="form-control" id="validationDefault01" formControlName="firstname"  required>
+    </div>
+    <div class="col-md-6">
+      <label for="last name" class="form-label">Last name :</label>
+      <input type="text" class="form-control" id="validationDefault02" formControlName="lastname" required>
+    </div>
+    <div class="sm-3">
+      <label for="email" class="form-label"> Email :</label>
+      <input type="email" class="form-control" id="email" formControlName="eamil" required>
+  </div>
+    <div class="sm-3">
+      <label for="exampleInputPassword1" class="form-label">Password :</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" formControlName="password" required>
+    </div>
+    <div class="sm-3">
+      <label for="exampleInputPassword1" class="form-label">Conform Password :</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" formControlName="Conpassword" required>
+    </div>
+
+
+    <div class="col-12">
+      <button class="btn btn-primary" type="submit" [disabled]="!signup.valid">Register</button>
+    </div>
+  </form>
+</div>

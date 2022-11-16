@@ -1,0 +1,36 @@
+<div class="headerNav position-relative">
+    <ul class="nav nav-pills">
+        <li class="nav-item">
+            <a class="nav-link " routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"
+                style="color: white; font-size: larger;">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link " routerLink="/about" routerLinkActive="active" style="color: white; font-size: larger;">
+                About</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link " routerLink="/price-card" routerLinkActive="active"
+                style="color: white; font-size: larger;">
+                Price Card</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link " routerLink="/addbook" routerLinkActive="active"
+                style="color: white; font-size: larger;">Add
+                Book</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link " routerLink="/login" routerLinkActive="active"
+                style="color: white; font-size: larger;">Login</a>
+        </li>
+        <li id="logout" class="position-absolute end-0">
+            <a href="#" (click)="logoutt()" style="font-size: larger;" class="nav-link" href="#"
+                routerLinkActive="active" style="color: white; font-size: larger;">
+                <i class="fa-solid fa-right-from-bracket fa-lg"></i></a>
+
+        </li>
+
+    </ul>
+</div>
+
+
+<router-outlet></router-outlet>

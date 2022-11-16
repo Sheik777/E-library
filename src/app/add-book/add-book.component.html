@@ -1,0 +1,62 @@
+<div class="book">
+    <h1>Add Book</h1>
+    <hr>
+    <form [formGroup]="addbook" (ngSubmit)="pushbook()">
+        <div class="sm-3">
+            <label for="bookid" class="form-label">Book Id </label>
+            <input type="text" class="form-control" id="bookId" formControlName="bookId">
+        </div>
+        <div class="sm-3">
+            <label for="Title" class="form-label">Title </label>
+            <input type="text" class="form-control" id="title" formControlName="title">
+        </div>
+        <div class="sm-3">
+            <label for="author" class="form-label">Author </label>
+            <input type="text" class="form-control" id="author" formControlName="author">
+        </div>
+        <!-- <div class="sm-3">
+            <label for="available" class="form-label">Available </label>
+            <input type="text" class="form-control" id="available" formControlName="available">
+            <div class="sm-3">
+                <label for="description" class="form-label">Description </label>
+                <textarea class="form-control" id="description" formControlName="desc"></textarea>
+            </div>
+        </div><br> -->
+        <div class="col-12">
+            <button class="btn btn-primary" type="submit" [disabled]="!addbook.valid">Add Book</button>
+        </div>
+    </form>
+</div>
+
+
+
+
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Book ID</th>
+        <th scope="col">Title</th>
+        <th scope="col">Author</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let obj of mybooks">
+        <th scope="row">1</th>
+        <td>{{obj.bookId}}</td>
+        <td>{{obj.title}}</td>
+        <td>{{obj.author}}</td>
+      </tr>
+     
+    </tbody>
+  </table>
+
+
+
+
+
+
+
+
+

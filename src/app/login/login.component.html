@@ -1,15 +1,20 @@
-<form>
-    <div>
-        <label class="">UserName
-            <input type="text" class="username" id="un">
-        </label><br>
-    </div>
-    <div>
-        <label class="">Password
-            <input type="password" class="pwd" id="pwd">
-        </label>
-    </div><br>
-    <div>
-        <button type="submit">Login</button>
-    </div>
-</form>
+<div class="login">
+    <h2 class="header">Login</h2>
+
+    <form [formGroup]="loginfrm" (ngSubmit)="login()">
+        <div class="sm-3">
+            <label for="username" class="form-label"> Email Id:</label>
+            <input type="text" class="form-control" id="username" formControlName="username" autocomplete="off">
+        </div>
+        <div class="sm-3">
+            <label for="Password" class="form-label">Password :</label>
+            <input type="password" class="form-control" id="Password" formControlName="password">
+        </div><br>
+        <button type="submit" id="btn" class="btn btn-primary" [disabled]="!loginfrm.valid">Submit</button><br><br>
+        <div *ngIf="useronvalid">
+            <span style="color: red;">Invalid Username,Please enter the value</span>
+        </div>
+
+        Don't have an account <a routerLink="/register">sign up and get started</a>
+    </form>
+</div>

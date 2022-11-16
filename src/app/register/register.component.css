@@ -1,0 +1,12 @@
+.reg{
+   
+    color: rgb(22, 19, 19);
+    width: 30%;
+    margin: auto;
+    margin-top: 8%;
+    box-sizing: border-box;
+    border: 3px solid #6116a8;
+    padding: 3.5%;
+    border-radius: 30px;
+    background: linear-gradient(120deg,#ffb3e6, #8e44ad);
+}
