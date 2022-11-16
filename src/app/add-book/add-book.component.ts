@@ -49,10 +49,3 @@ console.log(this.mybooks);
   }
 
 }
-
-// interface books{
-//   idbook:number;
-//   tit:string;
-//   auth:string;
-
-// }

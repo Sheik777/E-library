@@ -4,35 +4,24 @@
     <form [formGroup]="addbook" (ngSubmit)="pushbook()">
         <div class="sm-3">
             <label for="bookid" class="form-label">Book Id </label>
-            <input type="text" class="form-control" id="bookId" formControlName="bookId">
+            <input type="text" class="form-control" id="bookId" formControlName="bookId" autocomplete="off">
         </div>
         <div class="sm-3">
             <label for="Title" class="form-label">Title </label>
-            <input type="text" class="form-control" id="title" formControlName="title">
+            <input type="text" class="form-control" id="title" formControlName="title" autocomplete="off">
         </div>
         <div class="sm-3">
             <label for="author" class="form-label">Author </label>
-            <input type="text" class="form-control" id="author" formControlName="author">
-        </div>
-        <!-- <div class="sm-3">
-            <label for="available" class="form-label">Available </label>
-            <input type="text" class="form-control" id="available" formControlName="available">
-            <div class="sm-3">
-                <label for="description" class="form-label">Description </label>
-                <textarea class="form-control" id="description" formControlName="desc"></textarea>
-            </div>
-        </div><br> -->
+            <input type="text" class="form-control" id="author" formControlName="author" autocomplete="off">
+        </div><br>
+       
         <div class="col-12">
             <button class="btn btn-primary" type="submit" [disabled]="!addbook.valid">Add Book</button>
         </div>
     </form>
 </div>
 
-
-
-
-
-<table class="table">
+<table class="table table-hover">
     <thead>
       <tr>
         <th scope="col">#</th>
