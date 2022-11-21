@@ -1,6 +1,11 @@
 .footer{
     float: left;
     margin: 20px;
+    
+}
+.deadline{
+    height: 30%;
+    margin-top: 30%;
 }
 
 .footer li{

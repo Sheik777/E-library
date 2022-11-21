@@ -1,10 +1,123 @@
+<h2 style="text-align: center;">Book Price List </h2>
+<div class="">
+    <form [formGroup]="bookPriceForm" (ngSubmit)="priceSubmit()" novalidate>
+        <span>
+            <h3>Books Category: </h3>
+        </span>
+        <select name="booksCategory" id="booksCategory" (change)="books()" formControlName="categorySelect">
+            <option value="--select--">------select------</option>
+            <option value="allbooks">All Books</option>
+            <option value="Motivational">MotivationalBooks</option>
+            <option value="Novel">Novel Books</option>
+            <option value="comic">Comic Books</option>
+        </select>
+        <!-- <button type="submit">serch</button> -->
+    </form>
+</div>
+<div>
+    <div *ngIf="allBook1">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Sl No</th>
+                    <th scope="col">Book Id</th>
+                    <th scope="col">Book Name</th>
+                    <th scope="col">Author</th>
+                    <th scope="col">Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let Abook of allBooks let i=index">
+                    <td>{{i+1}} </td>
+                    <td>{{Abook.bookId}} </td>
+                    <td>{{Abook.bookName}} </td>
+                    <td>{{Abook.bookAuthor}} </td>
+                    <td>{{Abook.bookPrice}} </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div *ngIf="motivationBook1">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Sl No</th>
+                    <th scope="col">Book Id</th>
+                    <th scope="col">Book Name</th>
+                    <th scope="col">Author</th>
+                    <th scope="col">Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let Mbook of motivationalBooks let i=index">
+                    <td>{{i+1}} </td>
+                    <td>{{Mbook.bookId}} </td>
+                    <td>{{Mbook.bookName}} </td>
+                    <td>{{Mbook.bookAuthor}} </td>
+                    <td>{{Mbook.bookPrice}} </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div *ngIf="novelBook1">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Sl No</th>
+                    <th scope="col">Book Id</th>
+                    <th scope="col">Book Name</th>
+                    <th scope="col">Author</th>
+                    <th scope="col">Price</th>
+                </tr>
+
+            </thead>
+            <tbody>
+                <tr *ngFor="let nbook of novelBooks let i=index">
+                    <td>{{i+1}} </td>
+                    <td>{{nbook.bookId}} </td>
+                    <td>{{nbook.bookName}} </td>
+                    <td>{{nbook.bookAuthor}} </td>
+                    <td>{{nbook.bookPrice}} </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div *ngIf="comicBook1">
+        <table class="table table-hover">
+
+            <thead>
+                <tr>
+                    <th scope="col">Sl No</th>
+                    <th scope="col">Book Id</th>
+                    <th scope="col">Book Name</th>
+                    <th scope="col">Author</th>
+                    <th scope="col">Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let cbook of comicBooks let i=index">
+                    <td>{{i+1}} </td>
+                    <td>{{cbook.bookId}} </td>
+                    <td>{{cbook.bookName}} </td>
+                    <td>{{cbook.bookAuthor}} </td>
+                    <td>{{cbook.bookPrice}} </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
 
+</div>
+
+
+
+
+
+
+
+<div class="deadline">
     <div class="card text-center" id="foot">
-
         <div class="card-body">
-
-
             <div class="footer">
                 <ul>
                     <h4>
@@ -48,8 +161,6 @@
                     <li> Open Collective</li>
                     <li>Stack Overflow</li>
                 </ul>
-              
-
             </div>
             <ul style="width: 100%;" id="icon">
                 <li> <i class="fa-brands fa-facebook fa-2x"></i></li>
@@ -58,9 +169,6 @@
                 <li><i class="fa-brands fa-google fa-2x"></i></li>
             </ul>
         </div>
-
-
-
         <p class="card-text">E-Library
             Designed and built with all the love in the world by the E-Library team with the help of our
             contributors.
@@ -73,7 +181,4 @@
 
         </div>
     </div>
-
-
-
-
+</div>
