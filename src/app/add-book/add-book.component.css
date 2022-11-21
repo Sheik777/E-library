@@ -8,10 +8,13 @@
     margin-bottom: 2%;
     box-sizing:border-box;
     background: linear-gradient(120deg,#eee2ea, #7d8ce2);
-    
    
 }
+
 .col-12{
     width: 100%;
     text-align: center;
+}
+#edit{
+    margin-right: 5px;
 }

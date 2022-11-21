@@ -1,30 +1,46 @@
 <div class="reg">
 
-  <form class="row g-3" [formGroup]="signup" (ngSubmit)="reg()">
+  <form class="row g-3" [formGroup]="signup" (ngSubmit)="reg()" onvalid>
     <div class="col-md-6">
       <label for="firstname" class="form-label">First name :</label>
-      <input type="text" class="form-control" id="validationDefault01" formControlName="firstname"  required>
+      <input type="text" class="form-control" id="validationDefault01" formControlName="firstname" required>
+      <div *ngIf="onvalid">
+        <span style="color: red;">firstname is required</span>
+    </div>
     </div>
     <div class="col-md-6">
       <label for="last name" class="form-label">Last name :</label>
       <input type="text" class="form-control" id="validationDefault02" formControlName="lastname" required>
+      <div *ngIf="onvalid">
+        <span style="color: red;">lastname is required</span>
+    </div>
     </div>
     <div class="sm-3">
       <label for="email" class="form-label"> Email :</label>
-      <input type="email" class="form-control" id="email" formControlName="eamil" required>
-  </div>
+      <input type="email" class="form-control " id="email" formControlName="eamil" required>
+      <div *ngIf="onvalid">
+        <span style="color: red;">Email is required</span>
+    </div>
+    </div>
     <div class="sm-3">
       <label for="exampleInputPassword1" class="form-label">Password :</label>
       <input type="password" class="form-control" id="exampleInputPassword1" formControlName="password" required>
+      <div *ngIf="onvalid">
+        <span style="color: red;">password is required</span>
+    </div>
     </div>
     <div class="sm-3">
       <label for="exampleInputPassword1" class="form-label">Conform Password :</label>
-      <input type="password" class="form-control" id="exampleInputPassword1" formControlName="Conpassword" required>
+      <input type="password" class="form-control " id="exampleInputPassword1" formControlName="Conpassword" required>
     </div>
-
-
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+      <label class="form-check-label" for="invalidCheck">
+        Agree to terms and conditions
+      </label>
+    </div>
     <div class="col-12">
-      <button class="btn btn-primary" type="submit" [disabled]="!signup.valid">Register</button>
+      <button class="btn btn-primary" type="submit">Register</button>
     </div>
   </form>
 </div>

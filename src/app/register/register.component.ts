@@ -19,7 +19,7 @@ signup=new FormGroup({
  Conpassword: new FormControl('', [Validators.required]),
 
 })
-
+onvalid:boolean = false;
   constructor() { }
 
   ngOnInit(): void {
@@ -27,9 +27,32 @@ signup=new FormGroup({
 
  reg(){
   console.log(this.signup.value);
-  
- }
- 
- 
 
-}
+  if(this.signup.controls.firstname.valid)
+  this.onvalid = false
+ 
+  else {
+    this.onvalid = true;
+  }
+  if(this.signup.controls.lastname.valid)
+  this.onvalid = false
+ 
+  else {
+    this.onvalid = true;
+  }
+  if(this.signup.controls.email.valid)
+  this.onvalid = false
+ 
+  else {
+    this.onvalid = true;
+  }
+  if(this.signup.controls.password.valid)
+  this.onvalid = false
+ 
+  else {
+    this.onvalid = true;
+  }
+ } 
+
+
+} 

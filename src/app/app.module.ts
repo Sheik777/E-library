@@ -10,6 +10,9 @@ import { AboutComponent } from './about/about.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { AddBookComponent } from './add-book/add-book.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { PriceCardComponent } from './price-card/price-card.component';
+
+
 
 @NgModule({
   declarations: [
@@ -20,13 +23,17 @@ import { NavbarComponent } from './navbar/navbar.component';
     AboutComponent,
     PagenotfoundComponent,
     AddBookComponent,
-    NavbarComponent
+    NavbarComponent,
+    PriceCardComponent,
+
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    
     
   ],
   providers: [],

@@ -1,9 +1,11 @@
 .headerNav{
     background-color:rgb(148, 42, 158);
     width: 100%;
-    height: 45px;  
-}
-#id{
-    color: white;
-    float: right;
-}
+    height: 45px;
+}  
+/* }
+#logout{
+
+    padding: 5px;
+
+} */

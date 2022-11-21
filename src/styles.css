@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+.footer{
+    float: left;
+    margin: 20px;
+}
+
+.footer li{
+    list-style-type: none;
+    text-align: left;
+}
+#foot{
+    background-color: #3a3a3a;
+    color:white;
+}
+li{
+    list-style-type: none;
+}
+#icon li{
+    float: right;
+    padding: 10px;
+    margin-top: 20px;
+}
